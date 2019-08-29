@@ -1,4 +1,4 @@
-service: image-resize-on-the-fly-functions
+service: image-resize-on-the-fly-functions-test
 
 plugins:
   - serverless-plugin-tracing
@@ -9,7 +9,7 @@ provider:
   stage: ${env:STAGE, 'dev'}
   profile: serverless-admin
   tracing: true
-  region: ${env:REGION, 'us-east-1'}
+  region: ${env:REGION, 'eu-west-2'}
   environment:
     BUCKET: ${env:BUCKET}
     REGION: ${env:REGION}

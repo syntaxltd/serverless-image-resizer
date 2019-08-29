@@ -1,4 +1,4 @@
-service: image-resize-on-the-fly-bucket
+service: image-resize-on-the-fly-bucket-test
 
 custom:
   secrets: ${file(../secrets/secrets.json)}
@@ -8,7 +8,7 @@ provider:
   runtime: nodejs8.10
   stage: ${env:STAGE, 'dev'}
   profile: serverless-admin
-  region: us-east-1
+  region: ${env:REGION}
   environment:
     BUCKET: ${env:BUCKET}
 
